@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Request Received | Green River</title>
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="theme-color" content="#121212">
+
+    <!-- Google Fonts: Plus Jakarta Sans, Inter, JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&family=Plus+Jakarta+Sans:wght@700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+    <!-- Tailwind CSS (Hostinger-Ready Standalone CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        asphalt: '#121212',
+                        'asphalt-card': '#1C1C20',
+                        'asphalt-border': '#2E2E36',
+                        hazard: '#FFCC00',
+                        'hazard-hover': '#E6B800',
+                        'hazard-dark': '#B38F00'
+                    },
+                    fontFamily: {
+                        heading: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        body: ['"Inter"', 'sans-serif'],
+                        mono: ['"JetBrains Mono"', 'monospace']
+                    }
+                }
+            }
+        };
+    </script>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body class="bg-asphalt text-white font-body min-h-screen flex flex-col justify-between antialiased selection:bg-hazard selection:text-asphalt p-4 sm:p-6">
+
+    <!-- Main Container -->
+    <main class="w-full max-w-lg mx-auto my-auto text-center py-8">
+        
+        <!-- Large High-Contrast Success Icon -->
+        <div class="mx-auto w-20 h-20 sm:w-24 sm:h-24 rounded-2xl bg-hazard text-asphalt flex items-center justify-center shadow-[0_0_40px_rgba(255,204,0,0.35)] mb-6 animate-bounce">
+            <span class="material-symbols-outlined text-5xl sm:text-6xl font-black">check_circle</span>
+        </div>
+
+        <!-- Status Badge -->
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/15 border border-emerald-500/40 text-emerald-400 font-mono text-xs sm:text-sm font-bold uppercase tracking-wider mb-4">
+            <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping"></span>
+            <span>Request Confirmed</span>
+        </div>
+
+        <!-- Headline -->
+        <h1 class="font-heading text-3xl sm:text-4xl md:text-5xl font-black text-white uppercase tracking-tight leading-tight mb-4">
+            WE RECEIVED <br><span class="text-hazard">YOUR DETAILS.</span>
+        </h1>
+
+        <!-- Mandatory Client Expectation Box -->
+        <div class="bg-asphalt-card border-2 border-hazard/60 rounded-2xl p-6 sm:p-7 shadow-2xl mb-8 text-left">
+            <div class="flex items-start gap-3 mb-3">
+                <span class="material-symbols-outlined text-hazard text-3xl">phone_in_talk</span>
+                <h2 class="font-heading text-xl sm:text-2xl font-bold text-white uppercase">
+                    What Happens Next?
+                </h2>
+            </div>
+            <p class="text-xl sm:text-2xl text-neutral-100 font-bold leading-snug">
+                We received your details. We will call you shortly to understand how your business works before discussing any pricing or solutions.
+            </p>
+
+            <div class="mt-5 pt-4 border-t border-white/10 flex items-center gap-2 text-sm text-neutral-400">
+                <span class="material-symbols-outlined text-emerald-400 text-lg">check</span>
+                <span>Keep your phone nearby. No pressure, no aggressive sales pitch.</span>
+            </div>
+        </div>
+
+        <!-- Return Action Button -->
+        <a 
+            href="index.html" 
+            class="tap-press inline-flex items-center justify-center gap-2 w-full min-h-[58px] bg-white/10 hover:bg-white/20 border border-white/20 text-white font-heading text-xl font-bold uppercase tracking-wide rounded-xl transition"
+        >
+            <span class="material-symbols-outlined text-2xl">arrow_back</span>
+            <span>Back to Homepage</span>
+        </a>
+
+    </main>
+
+    <!-- Minimalist Footer -->
+    <footer class="w-full bg-[#101012] border-t border-asphalt-border py-6 px-4 mt-6 text-center">
+        <div class="max-w-lg mx-auto space-y-2">
+            <p class="font-mono text-xs sm:text-sm text-neutral-400 uppercase tracking-wider">
+                Powered by <strong class="text-white">Green River</strong>
+            </p>
+            <p class="text-[11px] text-neutral-400">
+                © 2026 Green River Enterprise Core. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>

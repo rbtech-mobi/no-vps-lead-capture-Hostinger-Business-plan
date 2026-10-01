@@ -1,0 +1,42 @@
+/**
+ * Green River Enterprise Core - Mobile Contractor Theme
+ * High-Contrast Dark Asphalt (#121212) with Hazard Yellow (#FFCC00) Accents
+ */
+
+/* Baseline mobile typography: prevent auto-zoom on iOS (minimum 16px, optimized at 18px-19px) */
+input, select, textarea, button {
+    font-size: 18px !important;
+}
+
+@media (min-width: 640px) {
+    input, select, textarea, button {
+        font-size: 19px !important;
+    }
+}
+
+/* Custom styled select arrow in Hazard Yellow */
+.select-custom {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%23FFCC00' stroke-linecap='round' stroke-linejoin='round' stroke-width='2.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+    background-position: right 1rem center;
+    background-repeat: no-repeat;
+    background-size: 1.5em 1.5em;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+/* Tactile feedback for mobile buttons */
+.tap-press {
+    transition: transform 0.1s ease, filter 0.15s ease;
+}
+
+.tap-press:active {
+    transform: scale(0.98);
+    filter: brightness(0.95);
+}
+
+/* Smooth modal transitions */
+.modal-backdrop {
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+}

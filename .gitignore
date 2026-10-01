@@ -1,0 +1,19 @@
+# Operating System Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Editor & IDE Directories
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Server Logs & Temp Files
+*.log
+*.tmp
+error_log

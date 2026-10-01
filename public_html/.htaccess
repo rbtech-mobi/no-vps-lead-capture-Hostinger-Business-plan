@@ -1,0 +1,39 @@
+# ==============================================================================
+# Green River Enterprise Core - Hostinger Apache / LiteSpeed Server Optimization
+# ==============================================================================
+
+# 1. Enforce UTF-8 Encoding
+AddDefaultCharset UTF-8
+AddCharset UTF-8 .html .css .js .svg .json
+
+# 2. Prevent Directory Browsing
+Options -Indexes
+
+# 3. Security Headers
+<IfModule mod_headers.c>
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set X-Frame-Options "SAMEORIGIN"
+    Header always set X-XSS-Protection "1; mode=block"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+# 4. Gzip / Deflate Compression for Instant Mobile Load Times
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json image/svg+xml
+</IfModule>
+
+# 5. Leverage Browser Caching for Assets
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+    ExpiresByType image/svg+xml "access plus 1 month"
+    ExpiresByType image/jpeg "access plus 1 month"
+    ExpiresByType image/png "access plus 1 month"
+</IfModule>
+
+# 6. Block Sensitive Files
+<FilesMatch "^\.">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
